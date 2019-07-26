@@ -25,6 +25,11 @@ webhook ----> 相当于是你提交或者issue等给 git仓库  然后git仓库�
 hexo部署配置 是新建了published分支  然后commit 编译好的博客文件
 
 ## 注意事项
+阿里云个蛇皮怪？不知道怎么回事儿。
+用nohup挂的node进程 一退出终端就挂
+然后 百度，就是nohup+&之后 要用exit退出 不能直接关闭终端。。。
+{% link 阿里云使用nohup来后台运行node.js服务在关掉putty后退出的解决方法 https://blog.csdn.net/chen_soldier/article/details/83146413 阿里云使用nohup来后台运行node.js服务在关掉putty后退出的解决方法 %}
+
 deploy.sh中的 git pull  嗯 建议是通过rsa来认证git的权限
 命令如下:
 {% codeblock %}
