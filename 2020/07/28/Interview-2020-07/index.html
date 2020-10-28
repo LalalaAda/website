@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>面试 2020 07 | 积极乐观</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="JS原型 参考地址： JavaScript之原型链的解读 JS原型继承123456789101112// 最佳寄生组合式继承function object(o) &amp;#123;  function F() &amp;#123;&amp;#125;  F.prototype = o;  return new F();&amp;#125;function prototype(child, parent) &amp;#123;  var">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试 2020 07">
+<meta property="og:url" content="http://4508me.com/2020/07/28/Interview-2020-07/index.html">
+<meta property="og:site_name" content="积极乐观">
+<meta property="og:description" content="JS原型 参考地址： JavaScript之原型链的解读 JS原型继承123456789101112// 最佳寄生组合式继承function object(o) &amp;#123;  function F() &amp;#123;&amp;#125;  F.prototype = o;  return new F();&amp;#125;function prototype(child, parent) &amp;#123;  var">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://4508me.com/2020/07/28/Interview-2020-07/原型.jpg">
+<meta property="og:updated_time" content="2020-10-28T01:56:12.180Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面试 2020 07">
+<meta name="twitter:description" content="JS原型 参考地址： JavaScript之原型链的解读 JS原型继承123456789101112// 最佳寄生组合式继承function object(o) &amp;#123;  function F() &amp;#123;&amp;#125;  F.prototype = o;  return new F();&amp;#125;function prototype(child, parent) &amp;#123;  var">
+<meta name="twitter:image" content="http://4508me.com/2020/07/28/Interview-2020-07/原型.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="积极乐观" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">积极乐观</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://4508me.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer" >
+        <section id="main"><article id="post-Interview-2020-07" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/28/Interview-2020-07/" class="article-date">
+  <time datetime="2020-07-28T09:19:06.000Z" itemprop="datePublished">2020-07-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      面试 2020 07
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JS原型"><a href="#JS原型" class="headerlink" title="JS原型"></a>JS原型</h2><img src="/2020/07/28/Interview-2020-07/原型.jpg" title="js原型图">
+<p>参考地址： <a href="https://www.jianshu.com/p/a9887fc15285" title="JavaScript之原型链的解读" target="_blank" rel="noopener">JavaScript之原型链的解读</a></p>
+<h2 id="JS原型继承"><a href="#JS原型继承" class="headerlink" title="JS原型继承"></a>JS原型继承</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 最佳寄生组合式继承</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">object</span>(<span class="params">o</span>) </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">  F.prototype = o;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> F();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">prototype</span>(<span class="params">child, parent</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> prototype = object(parent.prototype);</span><br><span class="line">  prototype.constructor = child;</span><br><span class="line">  child.prototype = prototype;</span><br><span class="line">&#125;</span><br><span class="line">prototype(Child, Parent);</span><br></pre></td></tr></table></figure>
+<details>
+  <summary>多种继承方式详情</summary>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.原型链继承</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = <span class="string">'tom'</span></span><br><span class="line">&#125;</span><br><span class="line">Parent.prototype.getName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">Child.prototype = <span class="keyword">new</span> Parent();</span><br><span class="line"><span class="keyword">var</span> c1 = <span class="keyword">new</span> Child();</span><br><span class="line"><span class="built_in">console</span>.log(c1.getName()); <span class="comment">//tom</span></span><br></pre></td></tr></table></figure>
+</details>
+
+<p>参考地址：<a href="https://github.com/mqyqingfeng/Blog/issues/16" target="_blank" rel="noopener">JavaScript深入之继承的多种方式和优缺点</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://4508me.com/2020/07/28/Interview-2020-07/" data-id="ckgss34r30001cgt581afsxv1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/10/28/vuecli-sockjs-error/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇文章</strong>
+      <div class="article-nav-title">
+        
+          vuecli-sockjs-error
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/27/hexo_config/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇文章</strong>
+      <div class="article-nav-title">hexo + webhook配置博客自动部署</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/10/28/vuecli-sockjs-error/">vuecli-sockjs-error</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/28/Interview-2020-07/">面试 2020 07</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/27/hexo_config/">hexo + webhook配置博客自动部署</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/26/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 tuzhida<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
